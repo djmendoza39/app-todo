@@ -1,0 +1,219 @@
+/* fuente */
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* button {
+  background-color: coral;
+  border: none;
+  border-radius: 1rem;
+  padding: 3rem;
+  box-shadow: 0px 16px 24px 2px rgba(0, 0, 0, 0.14),
+    0px 6px 30px 5px rgba(0, 0, 0, 0.12), 0px 8px 10px -7px rgba(0, 0, 0, 0.2);
+}
+
+.app {
+  background-color: darkcyan;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+} */
+body {
+  background-color: rgb(243, 246, 248);
+}
+ul {
+  margin-top: 1rem;
+}
+li {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+}
+a {
+  text-decoration: none;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+a:hover {
+  transition: all 0.5s ease;
+  color: #7cb140;
+}
+
+.container {
+  padding-top: 1rem;
+  width: 98%;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+}
+
+/* estilo de la imagen */
+img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+}
+.imgLogin {
+  border-radius: 50%;
+}
+.bi {
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* estilos app */
+.app {
+  position: relative;
+}
+
+/* elemento modal */
+.modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(62, 62, 62, 0.515);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+}
+
+.modificar-tarea {
+  background-color: rgb(255, 255, 255);
+  width: 24rem;
+  height: auto;
+  padding: 1rem;
+  border-radius: 0.6rem;
+}
+.modificar-tarea form input {
+  width: 100%;
+  margin-top: 2rem;
+}
+.modificar-tarea form textarea {
+  width: 100%;
+  height: 8rem;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  border: none;
+  background-color: rgba(229, 229, 229, 0.801);
+  border-radius: 0.4rem;
+}
+.contenedor-iconos {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* cabecera o header */
+header {
+  background-color: #fff;
+  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.14) inset,
+    0px 1px 1px -2px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 4rem;
+  padding: 0px 1rem 0px 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.miLogo,
+.header-info {
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+  gap: 1rem;
+}
+
+.header-info {
+  justify-content: flex-end;
+}
+
+.header-busqueda {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 76%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: rgba(244, 242, 242, 0.611);
+}
+
+.contenedorIconos .bi {
+  margin-right: 1.4rem;
+}
+h1 {
+  font-family: "Rubik Dirt", cursive;
+}
+
+/* main o cuerpo principal */
+
+.mainBoard {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/* card lista */
+.miLista {
+  width: 22rem;
+  padding: 0.8rem;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 1px -2px rgba(0, 0, 0, 0.12), 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.nuevaLista {
+  width: 22rem;
+  height: 4rem;
+  padding: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.824);
+  border-radius: 0.4rem;
+  display: grid;
+  place-content: center;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 1px -2px rgba(0, 0, 0, 0.12), 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.miLista input {
+  width: 98%;
+  border: none;
+}
+
+.nombreTarea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.contenidoTarea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem;
+}
+
+.contenedor-input {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.contenidoTarea *input {
+  width: 8%;
+  height: 1rem;
+}

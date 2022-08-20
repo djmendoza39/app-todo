@@ -1,0 +1,20 @@
+{
+  "name": "proyecto_to_do",
+  "version": "1.0.0",
+  "description": "Se realiza ejercicio en js referente a un app de listado de tareas diarias, este, crea, muestra, edita y elimina la informacion insertada.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "array",
+    "variables",
+    "funciones",
+    "metodos",
+    "de",
+    "array"
+  ],
+  "author": "Darwin Junior <djmendoza39@gmail.com>",
+  "license": "MIT"
+}
