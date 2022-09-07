@@ -6,34 +6,37 @@
   padding: 0;
   margin: 0;
 }
-/* button {
-  background-color: coral;
-  border: none;
-  border-radius: 1rem;
-  padding: 3rem;
-  box-shadow: 0px 16px 24px 2px rgba(0, 0, 0, 0.14),
-    0px 6px 30px 5px rgba(0, 0, 0, 0.12), 0px 8px 10px -7px rgba(0, 0, 0, 0.2);
-}
 
-.app {
-  background-color: darkcyan;
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  place-content: center;
-} */
 body {
   background-color: rgb(243, 246, 248);
 }
 ul {
   margin-top: 1rem;
+  width: 100%;
 }
 li {
   list-style: none;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   gap: 0.8rem;
+  margin-bottom: .3rem;
+  width: 100%;
+  padding: .3rem;
+  box-shadow: 0px 4px 6px -1px rgba(0,0,0,0.1) , 0px 2px 4px -1px rgba(0,0,0,0.06) ;
+}
+
+.btnEliminar, .btnModificar{
+  /* background-color: #FFC80E; */
+  padding: .4rem;
+  border: none;
+  margin-right: .3rem;
+  cursor: pointer;
+}
+.miColor{
+  color: #f44744;
+  
 }
 a {
   text-decoration: none;
@@ -45,7 +48,7 @@ a {
 
 a:hover {
   transition: all 0.5s ease;
-  color: #7cb140;
+  color: #557233;
 }
 
 .container {
@@ -75,43 +78,6 @@ img {
   position: relative;
 }
 
-/* elemento modal */
-.modal {
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(62, 62, 62, 0.515);
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: grid;
-  place-content: center;
-}
-
-.modificar-tarea {
-  background-color: rgb(255, 255, 255);
-  width: 24rem;
-  height: auto;
-  padding: 1rem;
-  border-radius: 0.6rem;
-}
-.modificar-tarea form input {
-  width: 100%;
-  margin-top: 2rem;
-}
-.modificar-tarea form textarea {
-  width: 100%;
-  height: 8rem;
-  margin-top: 2rem;
-  padding: 0.5rem;
-  border: none;
-  background-color: rgba(229, 229, 229, 0.801);
-  border-radius: 0.4rem;
-}
-.contenedor-iconos {
-  display: flex;
-  justify-content: space-between;
-}
-
 /* cabecera o header */
 header {
   background-color: #fff;
@@ -128,7 +94,6 @@ header {
 .header-info {
   display: flex;
   align-items: center;
-
   flex: 1;
   gap: 1rem;
 }
@@ -213,7 +178,59 @@ h1 {
   gap: 0.8rem;
 }
 
-.contenidoTarea *input {
+.contenidoTarea * input {
   width: 8%;
   height: 1rem;
+}
+
+
+/* modal */
+.mostrarModal{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #17220aac;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.datosTarea{
+  width: 36rem;
+  background-color: #edede3;
+  height: 28rem;
+  padding: 1rem;
+  border-radius: .4rem;
+}
+
+.contenedorIconos{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: rgb(76, 135, 18);
+}
+
+.inputUpdate{
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  margin-top: 1rem;
+}
+textarea{
+  width: 100%;
+  height: 15rem;
+  margin-top: 1rem;
+  border: none;
+  padding-top: 1rem;
+}
+
+.btnActualizar{
+  border: none;
+  padding: 1.2rem;
+  margin-top: 1rem;
+  border-radius: .2rem;
+  background-color: #f45a3f;
+  color: rgb(229, 226, 226);
+  display: inline-block;
 }

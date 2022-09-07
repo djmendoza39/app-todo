@@ -1,20 +1,26 @@
 {
-  "name": "proyecto_to_do",
+  "name": "proyecto-todo",
   "version": "1.0.0",
-  "description": "Se realiza ejercicio en js referente a un app de listado de tareas diarias, este, crea, muestra, edita y elimina la informacion insertada.",
+  "description": "",
   "main": "index.js",
   "scripts": {
+    "build":"webpack",
+    "watch":"webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "js",
-    "array",
-    "variables",
-    "funciones",
-    "metodos",
-    "de",
-    "array"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djmendoza39/app-todo.git"
+  },
+  "keywords": [],
   "author": "Darwin Junior <djmendoza39@gmail.com>",
-  "license": "MIT"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djmendoza39/app-todo/issues"
+  },
+  "homepage": "https://github.com/djmendoza39/app-todo#readme",
+  "dependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
 }

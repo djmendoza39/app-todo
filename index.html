@@ -1,117 +1,82 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lista de tareas</title>
-    <link rel="stylesheet" href="/css/estilos.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
-    <style>
-      
-    </style>
-  </head>
-  <body>
-    <!-- <div class="modificar-tarea">
-      <div class="contenedor-iconos">
-        <i class="bi bi-trash"></i>
-        <i class="bi bi-x"></i>
-      </div>
-      <form>
-        <input
-          type="text"
-          name="titulo"
-          id="titulo"
-          placeholder="modifique el texto"
-        />
-        <textarea
-          name="descripcion"
-          id="descripcion"
-          placeholder="ingrese detalles de la actividad"
-        ></textarea>
-      </form>
-      <ul>
-        <li><i class="bi bi-cloud"></i> Attach file</li>
-        <li><i class="bi bi-card-list"></i>Add Assigne</li>
-        <li><i class="bi bi-calendar-check"></i>Add date</li>
-        <li><i class="bi bi-arrow-return-right"></i>Add subtask</li>
-      </ul>
-    </div> -->
-    <div id="app" class="app">
-      <header>
-        <div class="miLogo">
-          <i class="bi bi-list"></i>
-          <img src="logoToDo.png" alt="imagen del sitio web" />
-          <h1>ToDo</h1>
-        </div>
-        <div class="header-busqueda">
-          <input
-            type="search"
-            name="buscar"
-            id="inputBuscar"
-            placeholder="Buscar..."
-          />
-        </div>
-        <div class="header-info">
-          <div class="contenedorIconos">
-            <i class="bi bi-cloud-minus"></i>
-            <i class="bi bi-grip-horizontal"></i>
-            <i class="bi bi-gear-fill"></i>
-          </div>
-          <div class="contenedorLogin">
-            <img class="imgLogin" src="djJunior.jpeg" alt="login" />
-          </div>
-        </div>
-      </header>
-      <main>
-        <div class="mainBoard">
-          <h3>Main Board</h3>
-          <i class="bi bi-three-dots-vertical"></i>
-        </div>
-        <div class="container-listas">
-          <div class="container">
-            <div class="miLista">
-              <div class="nombreTarea">
-                <input
-                  type="text"
-                  name="tituloTarea"
-                  id="tituloTarea"
-                  placeholder="lista de tareas"
-                />
-                <i class="bi bi-three-dots-vertical"></i>
-              </div>
-              <div class="tareas">
-                <a href="#"><i class="bi bi-plus"></i> Agregra una tarea</a>
-              </div>
-              <div class="contenidoTarea">
-                <div class="contenedor-input">
-                  <input type="checkbox" name="" id="" />
-                  <p>css</p>
-                </div>
-                <div class="contenedor-icon-pencil">
-                  <i id="mostrarModal" class="bi bi-pencil"></i>
-                </div>
-              </div>
-            </div>
-            <div class="container-nuevaLista">
-              <div class="nuevaLista">
-                <a href="google.com"
-                  ><i class="bi bi-plus"></i> Agregra una Lista</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <!-- <button id="btn-play">Ejecutar app ToDo</button> -->
-    </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps Todo</title>
+    <link rel="stylesheet" href="src/assets/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
 
-    <!-- <script src="/js/funciones.js"></script>
-    <script src="/js/variables.js"></script>
-    <script src="/js/index.js"></script> -->
-    <script src="js-modal/modal.js"></script>
-  </body>
+    <div class="app" id="app">
+        <!-- modal -->
+        <!-- <div class="mostrarModal">
+          <div class="datosTarea">
+            <div class="contenedorIconos">
+              <i class="bi bi-trash-fill"></i>
+              <i class="bi bi-x-circle-fill"></i>
+            </div>
+            <form action="">
+              <input class="inputUpdate" type="text" placeholder="nombre a actualizar">
+              <textarea> detalles de la actividad a realizar</textarea>
+              <a class="btnActualizar">Guardar</a>
+            </form>
+          </div>
+        </div> -->
+        <!-- cierre modal -->
+        <header>
+          <div class="miLogo">
+            <i class="bi bi-list"></i>
+            <img src="./src/assets/logoToDo.png" alt="imagen del sitio web" >
+            <h1>ToDo</h1>
+          </div>
+          <div class="header-busqueda">
+            <input type="search" name="buscar" id="inputBuscar" placeholder="Buscar...">
+          </div>
+          <div class="header-info">
+            <div class="contenedorIconos">
+              <i class="bi bi-cloud-minus"></i>
+              <i class="bi bi-grip-horizontal"></i>
+              <i class="bi bi-gear-fill"></i>
+            </div>
+            <div class="contenedorLogin">
+              <img class="imgLogin" src="./src/assets/djJunior.jpeg" alt="login">
+            </div>
+          </div>
+        </header>
+        <main>
+          <div class="mainBoard">
+            <h3>Main Board</h3>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
+          <div class="container-listas">
+            <div class="container">
+              <div class="miLista">
+                <div class="nombreTarea">
+                  <input type="text" name="tituloTarea" id="inputTask" placeholder="lista de tareas">
+                  <i class="bi bi-three-dots-vertical"></i>
+                </div>
+                <div class="tareas">
+                  <a id="addTarea" href="#"><i class="bi bi-plus"></i> Agregra una tarea</a>
+                </div>
+                <div class="contenidoTarea">
+                  <ul>
+                    
+                  </ul>
+                </div>
+              </div>
+              <div class="container-nuevaLista">
+                <div class="nuevaLista">
+                  <a href="#"><i class="bi bi-plus"></i> Agregra una Lista</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        
+      </div> 
+    <script src="build/main.js"></script>
+</body>
 </html>
