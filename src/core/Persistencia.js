@@ -5,13 +5,12 @@ export class Persistencia{
     }
 
     getItem(key){
-        
         return JSON.parse(window.localStorage.getItem(key));
-        
     }
 
     removeItem(key){
-        return window.localStorage.removeItem(key);
+        window.localStorage.removeItem(key);
+        return true;
     }
 
 
