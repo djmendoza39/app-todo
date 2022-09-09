@@ -1,6 +1,5 @@
 /* fuente */
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 * {
   box-sizing: border-box;
   padding: 0;
@@ -9,6 +8,7 @@
 
 body {
   background-color: rgb(243, 246, 248);
+  font-family: 'Roboto', sans-serif;
 }
 ul {
   margin-top: 1rem;
@@ -30,8 +30,8 @@ li {
 }
 
 .btnEliminar, .btnEditar{
-  /* background-color: #FFC80E; */
-  padding: .4rem;
+  background-color: #37b84d63;
+  padding: .5rem;
   border: none;
   margin-right: .3rem;
   cursor: pointer;

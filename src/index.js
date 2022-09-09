@@ -19,8 +19,8 @@ import { App } from "./app/App";
         let eliminar = document.createElement("button");
         let editar = document.createElement("button");
         let contenedorBtn = document.createElement('div');
-        editar.textContent='editar'
-        eliminar.textContent = "eliminar";
+        editar.innerHTML = `<i class="bi bi-pencil"></i>`;
+        eliminar.innerHTML = `<i class="bi bi-x-circle-fill"></i>`;
         eliminar.setAttribute('class', 'btnEliminar')
         editar.setAttribute('class', 'btnEditar')
         li.textContent = inputText.value;
@@ -38,8 +38,8 @@ import { App } from "./app/App";
         let eliminar = document.createElement('button');
         let editar = document.createElement("button");
         let contenedorBtn = document.createElement('div');
-        editar.textContent = 'editar';
-        eliminar.textContent = 'eliminar';
+        editar.innerHTML = `<i class="bi bi-pencil"></i>`;
+        eliminar.innerHTML = `<i class="bi bi-x-circle-fill"></i>`;
         eliminar.setAttribute('class', 'btnEliminar');
         editar.setAttribute('class', 'btnEditar');
         li.textContent = element.tarea;
