@@ -26,16 +26,15 @@ import { App } from "./app/App";
             
             if(app.dato.save('tarea', aListaTarea)){
                 inputTarea.value = '';
-                
                 alert('tarea guardada con exito');
-                app.dato.show('tarea').forEach((elemento, pos)=>{
-                    li.textContent = elemento.tarea + ' ' + pos;
+                app.dato.show('tarea').forEach((elemento)=>{
+                    li.textContent = elemento.tarea;
                     ul.appendChild(li);
                     li.appendChild(containerButton);
                     containerButton.appendChild(btnEliminar);  
                     containerButton.appendChild(btnActualizar); 
                 });
-                console.log(aListaTarea)
+                
             }else{
                 console.log('error al guardar la informacion')
             }
@@ -43,25 +42,55 @@ import { App } from "./app/App";
         }
     });
 
-    app.dato.show('tarea').forEach((element, pos) => {
-        const btnEliminar = document.createElement('button')
-        let li = document.createElement('li');
-        const btnActualizar = document.createElement('button')
-        const containerButton = document.createElement('div');
-        containerButton.setAttribute('class', 'containerButtons');
-        btnEliminar.innerHTML= `<i class="bi bi-trash-fill miColor"></i>`;
-        btnEliminar.setAttribute('class', 'btnEliminar');
-        btnActualizar.innerHTML = `<i class="bi bi-pencil-fill"></i>`
-        btnActualizar.setAttribute('class', 'btnModificar');
-        li.textContent = element.tarea + pos;
-        ul.appendChild(li);
-        li.appendChild(containerButton);
-        containerButton.appendChild(btnEliminar); 
-        containerButton.appendChild(btnActualizar); 
-        aListaTarea.push(element);
+    if(app.dato.show('tarea')){
+        app.dato.show('tarea').forEach((element, pos) => {
+            const btnEliminar = document.createElement('button')
+            let li = document.createElement('li');
+            const btnActualizar = document.createElement('button')
+            const containerButton = document.createElement('div');
+            containerButton.setAttribute('class', 'containerButtons');
+            btnEliminar.innerHTML= `<i class="bi bi-trash-fill miColor"></i>`;
+            btnEliminar.setAttribute('class', 'btnEliminar');
+            btnActualizar.innerHTML = `<i class="bi bi-pencil-fill"></i>`
+            btnActualizar.setAttribute('class', 'btnModificar');
+            li.textContent = element.tarea;
+            ul.appendChild(li);
+            li.appendChild(containerButton);
+            containerButton.appendChild(btnEliminar); 
+            containerButton.appendChild(btnActualizar); 
+            aListaTarea.push(element); 
+            
+            li.addEventListener('click', (e)=>{
+                
+                e.preventDefault()
+                let contenido = aListaTarea.indexOf(element);
+                if(contenido === pos){
+                    console.log(`elemento eliminado: ${element.tarea}`)
+                    aListaTarea.splice(contenido, 1);
+                    aListaTarea.push(element)
+                }
+                
+             })
+            
+            
+        });
+    
         
 
-    });
+    }
+
+    function eliminar(array , index){
+        if(array.length > -1){
+            
+        }else{
+            return;
+        }
+    }
+    
+    
+
+
+    
 
 
 })(new App(new Todo(new Persistencia)), new Eventos)

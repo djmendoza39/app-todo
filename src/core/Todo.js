@@ -20,7 +20,8 @@ export class Todo{
     }
 
     delete(key){
-        return this.todo.removeItem(key);
+        this.todo.removeItem(key);
+        return true;
     }
 
 
